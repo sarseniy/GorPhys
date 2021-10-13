@@ -47,10 +47,6 @@ public:
 	void perr() override {
 		cout << "NewErr occured";
 	}
-private:
-	double c;
-	double t;
-	double h;
 };
 
 void print(const vector<double>& vec) {
