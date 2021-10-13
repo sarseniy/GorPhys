@@ -34,6 +34,25 @@ private:
 	double h;
 };
 
+class NewErr : public Error
+{
+public:
+	NewErr()
+	{}
+
+	bool test(vector<double> &data) {
+		return (data.data() == nullptr);
+	}
+
+	void perr() override {
+		cout << "NewErr occured";
+	}
+private:
+	double c;
+	double t;
+	double h;
+};
+
 void print(const vector<double>& vec) {
 	cout.setf(ios::fixed);
 	for (size_t i = 0; i < vec.size(); i++)
@@ -102,6 +121,11 @@ public:
 
 	void Solve() {
 		vector<vector<double>> tmp(2);
+		NewErr err;
+		if (err.test(tmp[1]) or err.test(tmp[1]))
+		{
+			throw err;
+		}
 		tmp[0] = U0;
 		tmp[1] = U0;
 
@@ -181,6 +205,11 @@ public:
 		vector<vector<double>> tmp(2);
 		tmp[0] = U0;
 		tmp[1] = U0;
+		NewErr err;
+		if (err.test(tmp[1]) or err.test(tmp[1]))
+		{
+			throw err;
+		}
 
 		int t_count = 0;
 		for (int t1 = 1; t1 < T / t; t1++)
@@ -230,6 +259,10 @@ int main() {
 		b = LW_solver.GetResult();
 	}
 	catch (CurErr err)
+	{
+		err.perr();
+	}
+	catch (NewErr err)
 	{
 		err.perr();
 	}
