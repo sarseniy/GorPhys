@@ -90,31 +90,16 @@ int main()
 
     DataStruct* data = DataStructFactory(s);
 
-    std::cout << typeid(*data).name();
+    std::cout << typeid(*data).name() << '\n';
 
-    /*Queue queue;
-    queue.push(1);
-    queue.push(2);
-    queue.push(3);
-    std::cout << queue.pop() << ' ';
-    queue.push(4);
-    std::cout << queue.pop() << ' ';
-    std::cout << queue.pop() << ' ';
-    std::cout << queue.pop() << ' ';
-    queue.push(5);
-    std::cout << queue.pop() << ' ';
-
-    std::cout << '\n';
-
-    Stack stack;
-    stack.push(1);
-    stack.push(2);
-    stack.push(3);
-    std::cout << stack.pop() << ' ';
-    stack.push(4);
-    std::cout << stack.pop() << ' ';
-    std::cout << stack.pop() << ' ';
-    std::cout << stack.pop() << ' ';
-    stack.push(5);
-    std::cout << stack.pop() << ' ';*/
+    data->push(1);
+    data->push(2);
+    data->push(3);
+    std::cout << data->pop() << ' ';
+    data->push(4);
+    std::cout << data->pop() << ' ';
+    std::cout << data->pop() << ' ';
+    std::cout << data->pop() << ' ';
+    data->push(5);
+    std::cout << data->pop() << ' ';
 }
