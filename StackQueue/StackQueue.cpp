@@ -4,6 +4,9 @@ class DataStruct {
 public:
     virtual void push(int value) = 0;
     virtual int pop() = 0;
+    virtual ~DataStruct() {
+
+    }
 };
 
 class Queue : public DataStruct {
@@ -20,9 +23,15 @@ public:
         tmp->next = new Queue(value);
     }
 
+    ~Queue()
+    {
+        if (next != nullptr) delete next;
+    }
+
     int pop() override {
         Queue* tmp = this->next->next;
         int ans = this->next->data;
+        this->next->next = nullptr;
         delete this->next;
         this->next = tmp;
         return ans;
@@ -49,6 +58,11 @@ public:
         tmp->next = new Stack(value);
     }
 
+    ~Stack()
+    {
+        if (next != nullptr) delete next;
+    }
+
     int pop() override {
         Stack* tmp = this->next;
         Stack* tmp1 = this;
@@ -59,6 +73,7 @@ public:
             tmp1 = tmp1->next;
         }
         int ans = tmp->data;
+        tmp->next = nullptr;
         delete tmp;
         tmp1->next = nullptr;
         return ans;
