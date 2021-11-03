@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StackQueue", "StackQueue\St
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CauchySolver", "CauchySolver\CauchySolver.vcxproj", "{1656CADE-5753-424C-8E08-7B8890F45345}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoordQuadr", "CoordQuadr\CoordQuadr.vcxproj", "{F5DCF622-A1FE-4518-A72C-86EBE79CCC50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{1656CADE-5753-424C-8E08-7B8890F45345}.Release|x64.Build.0 = Release|x64
 		{1656CADE-5753-424C-8E08-7B8890F45345}.Release|x86.ActiveCfg = Release|Win32
 		{1656CADE-5753-424C-8E08-7B8890F45345}.Release|x86.Build.0 = Release|Win32
+		{F5DCF622-A1FE-4518-A72C-86EBE79CCC50}.Debug|x64.ActiveCfg = Debug|x64
+		{F5DCF622-A1FE-4518-A72C-86EBE79CCC50}.Debug|x64.Build.0 = Debug|x64
+		{F5DCF622-A1FE-4518-A72C-86EBE79CCC50}.Debug|x86.ActiveCfg = Debug|Win32
+		{F5DCF622-A1FE-4518-A72C-86EBE79CCC50}.Debug|x86.Build.0 = Debug|Win32
+		{F5DCF622-A1FE-4518-A72C-86EBE79CCC50}.Release|x64.ActiveCfg = Release|x64
+		{F5DCF622-A1FE-4518-A72C-86EBE79CCC50}.Release|x64.Build.0 = Release|x64
+		{F5DCF622-A1FE-4518-A72C-86EBE79CCC50}.Release|x86.ActiveCfg = Release|Win32
+		{F5DCF622-A1FE-4518-A72C-86EBE79CCC50}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
