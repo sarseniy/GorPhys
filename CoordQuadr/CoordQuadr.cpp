@@ -91,7 +91,7 @@ private:
 	double y_mod;
 };
 
-void Quard(Coord* p) {
+void Quadr(Coord* p) {
 	if (typeid(*p) == typeid(AbsCoord))
 	{
 		auto v = dynamic_cast<AbsCoord*>(p);
@@ -100,11 +100,75 @@ void Quard(Coord* p) {
 		{
 			std::cout << "First quadr";
 		}
+		else if (*tmp[0] < 0 and *tmp[1] > 0)
+		{
+			std::cout << "Second quadr";
+		}
+		else if (*tmp[0] < 0 and *tmp[1] < 0)
+		{
+			std::cout << "Third quadr";
+		}
+		else if (*tmp[0] > 0 and *tmp[1] < 0)
+		{
+			std::cout << "Fourth quadr";
+		}
 	}
+	else if (typeid(*p) == typeid(ModCoord))
+	{
+		auto v = dynamic_cast<ModCoord*>(p);
+		double** tmp = v->getMod();
+		*tmp[0] = *tmp[0] * cos(PI / 4) + *tmp[1] * sin(PI / 4);
+		*tmp[1] = -*tmp[0] * sin(PI / 4) + *tmp[1] * cos(PI / 4);
+		if (*tmp[0] > 0 and *tmp[1] > 0)
+		{
+			std::cout << "First quadr";
+		}
+		else if (*tmp[0] < 0 and *tmp[1] > 0)
+		{
+			std::cout << "Second quadr";
+		}
+		else if (*tmp[0] < 0 and *tmp[1] < 0)
+		{
+			std::cout << "Third quadr";
+		}
+		else if (*tmp[0] > 0 and *tmp[1] < 0)
+		{
+			std::cout << "Fourth quadr";
+		}
+	}
+	else if (typeid(*p) == typeid(Coord))
+	{
+		double** tmp = p->get();
+		if (*tmp[0] > 0 and *tmp[1] > 0)
+		{
+			std::cout << "First quadr";
+		}
+		else if (*tmp[0] < 0 and *tmp[1] > 0)
+		{
+			std::cout << "Second quadr";
+		}
+		else if (*tmp[0] < 0 and *tmp[1] < 0)
+		{
+			std::cout << "Third quadr";
+		}
+		else if (*tmp[0] > 0 and *tmp[1] < 0)
+		{
+			std::cout << "Fourth quadr";
+		}
+	}
+	std::cout << '\n';
 }
 
 int main()
 {
+	Coord a(1.42, -6.3);
+	Quadr(&a);
+
+	AbsCoord b(-5, 3);
+	Quadr(&b);
+
+	ModCoord c(-1, -1);
+	Quadr(&c);
 
 	return 0;
 }
