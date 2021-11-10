@@ -5,7 +5,7 @@
 class Solver {
 public:
     virtual void solve() = 0;
-    //virtual void print() = 0;
+    virtual void print() = 0;
     ~Solver() {}
 };
 
@@ -65,7 +65,7 @@ private:
         return res;
     }
 
-    double lim(int j, int i) {
+    double minmod_lim(int j, int i) {
         double res = 0;
         res = std::min(abs(data[j][i + 1] - data[j][i]), abs(data[j][i - 1] - data[j][i]));
         res *= ((data[j][i + 1] - data[j][i]) < 0) ? -1 : 1;
@@ -100,7 +100,7 @@ private:
     double t_end = 10;
     double a = -20;
     double b = 20;
-    double (TVD::*limPtr)(int, int) = &TVD::lim;
+    double (TVD::*limPtr)(int, int) = &TVD::minmod_lim;
     double ksi;
     double h;
     double t;
