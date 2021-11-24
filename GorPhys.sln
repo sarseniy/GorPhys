@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TVD", "TVD\TVD.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyList", "MyList\MyList.vcxproj", "{0276C6E9-B86E-4B6C-AD1C-928E419DB6EC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WordOpposite", "WordOpposite\WordOpposite.vcxproj", "{5B2DF763-428F-49AE-B175-E8199239DDFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{0276C6E9-B86E-4B6C-AD1C-928E419DB6EC}.Release|x64.Build.0 = Release|x64
 		{0276C6E9-B86E-4B6C-AD1C-928E419DB6EC}.Release|x86.ActiveCfg = Release|Win32
 		{0276C6E9-B86E-4B6C-AD1C-928E419DB6EC}.Release|x86.Build.0 = Release|Win32
+		{5B2DF763-428F-49AE-B175-E8199239DDFD}.Debug|x64.ActiveCfg = Debug|x64
+		{5B2DF763-428F-49AE-B175-E8199239DDFD}.Debug|x64.Build.0 = Debug|x64
+		{5B2DF763-428F-49AE-B175-E8199239DDFD}.Debug|x86.ActiveCfg = Debug|Win32
+		{5B2DF763-428F-49AE-B175-E8199239DDFD}.Debug|x86.Build.0 = Debug|Win32
+		{5B2DF763-428F-49AE-B175-E8199239DDFD}.Release|x64.ActiveCfg = Release|x64
+		{5B2DF763-428F-49AE-B175-E8199239DDFD}.Release|x64.Build.0 = Release|x64
+		{5B2DF763-428F-49AE-B175-E8199239DDFD}.Release|x86.ActiveCfg = Release|Win32
+		{5B2DF763-428F-49AE-B175-E8199239DDFD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
